@@ -46,6 +46,7 @@ nav ul{
     display: flex;
     align-items: center;
     list-style: none;
+    
 }
 
 .nav-carrinho img{
@@ -53,7 +54,7 @@ nav ul{
     cursor: pointer;
 }
 
-.nav-carrinho li:first-child{
+.nav-carrinho a:first-child{
     margin-right: 3rem;
 }
 
@@ -63,6 +64,7 @@ nav ul{
 
 nav ul a{
     margin-right: 1.5rem;
+    text-decoration: none;
 }
 
 nav ul a:hover{
