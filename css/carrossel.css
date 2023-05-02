@@ -1,78 +1,102 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.slider{
+    margin: 30px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50px;
 }
 
-.imgcarrossel{
-    width: 850px;
-    height: 450px;
-    flex-shrink: 0;
-    opacity: 0.1;
-    transition: all 600ms ease-in-out;
-    border-radius: 20px;
-}
-
-.current-item{
-    opacity: 1;
-}
-
-.img1{
-    width: 30px;
-    height: 30px;
-}
-
-.container{
-    position: relative;
-    padding: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.carrossel-wapper{
-    overflow-x: auto;
-   
-}
-
-.carrossel{
+.slides{
+    width: 400%;
+    height: 400px;
     display: flex;
-    flex-flow: row nowrap;
-    gap: 20px;
-   
 }
 
-.arrow-left, .arrow-rigth{
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: auto;
-   bottom: 0;
-   line-height: 250px;
-   width: 40px;
-   cursor: pointer;
-   border: none;
-   background: linear-gradient(to left, transparent 0%, black 200%);
-   opacity: 0.01;
-   transition: all 600ms ease-in-out;
+.slides input{
+  display: none;
 }
 
-
-.arrow-rigth{
-    left: auto;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, transparent 0%, black 200%);
+.slide{
+    width: 25%;
+    position: relative;
 }
 
-.arrow-left:hover, .arrow-rigth:hover{
-    opacity: 1;
+.slide img{
+    width: 800px;
 }
 
-.carrossel-wapper::-webkit-scrollbar {
-    display: none;
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
 }
 
-.carrossel-wapper {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 45px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 45px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn{
+    background-color: #fff;
 }
